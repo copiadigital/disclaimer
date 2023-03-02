@@ -1,0 +1,47 @@
+{
+  "name": "@roots/clover",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "description": "Clover",
+  "homepage": "https://roots.io/",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Roots",
+      "email": "team@roots.io"
+    }
+  ],
+  "browserslist": [
+    "extends @wordpress/browserslist-config"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "build": "mix",
+    "build:production": "mix --production",
+    "start": "mix watch",
+    "hot": "mix watch --hot"
+  },
+  "devDependencies": {
+    "@wordpress/babel-preset-default": "^6.1.0",
+    "@wordpress/browserslist-config": "^4.0.0",
+    "@wordpress/dependency-extraction-webpack-plugin": "^3.1.3",
+    "browser-sync": "^2.26.12",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "laravel-mix": "^6.0.43",
+    "laravel-mix-copy-watched": "^2.2.4",
+    "laravel-mix-purgecss": "^6.0.0",
+    "npm-run-all": "^4.1",
+    "postcss": "^8.4.14",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.34.0",
+    "sass-loader": "11.1.1"
+  }
+}

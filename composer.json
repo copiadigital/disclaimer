@@ -1,0 +1,38 @@
+{
+  "name": "copiadigital/disclaimer",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "description": "Disclaimer",
+  "homepage": "https://github.com/copiadigital/disclaimer",
+  "authors": [
+    {
+      "name": "Chris Willmott",
+      "email": "chris.willmott@copiadigital.com",
+      "homepage": "https://github.com/teaforchris"
+    },
+    {
+      "name": "Jayson Garcia",
+      "email": "jayson.garcia@copiadigital.com",
+      "homepage": "https://github.com/hallowichig0"
+    },
+    {
+      "name": "Copia Digital Dev Team",
+      "email": "info@copiadigital.com",
+      "homepage": "https://github.com/copiadigital"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Disclaimer\\": "src/"
+    },
+    "files": ["src/helpers.php"]
+  },
+  "require": {
+    "php": "^7.1"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

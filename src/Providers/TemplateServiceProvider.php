@@ -64,7 +64,7 @@ class TemplateServiceProvider implements Provider
      */
     public function injectDisclaimerTemplate()
     {
-        $this->countries = get_field_object('countries_to_allow', 'option');
+        $this->countries = get_field_object('disclaimer_settings_countries_to_allow', 'option');
         include_once wp_normalize_path( DISCLAIMER_PLUGIN_DIR . '/template/disclaimer.php' );
     }
     

@@ -20,8 +20,10 @@ class DisclaimerFieldsServiceProvider implements Provider
             $field['choices'] = array();
             $users = get_field('disclaimer_settings_user_types', 'option');
             $usersArrays = [];
-            foreach($users as $user) {
-                $usersArrays[\Disclaimer\disclaimerReplaceAll($user['disclaimer_settings_user_types_name'])] = $user['disclaimer_settings_user_types_name'];
+            if($users) {
+                foreach($users as $user) {
+                    $usersArrays[\Disclaimer\disclaimerReplaceAll($user['disclaimer_settings_user_types_name'])] = $user['disclaimer_settings_user_types_name'];
+                }
             }
             $field['choices'] = $usersArrays;
         }
@@ -150,7 +152,7 @@ class DisclaimerFieldsServiceProvider implements Provider
             'label' => 'Countries',
             'name'  => 'disclaimer_settings_countries',
             'type'  => 'select',
-            'required' => 0,
+            'required' => 1,
             'conditional_logic' => array(
                 array(
                     array(
@@ -439,7 +441,7 @@ class DisclaimerFieldsServiceProvider implements Provider
             'label' => 'Countries to allow',
             'name'  => 'disclaimer_settings_countries_to_allow',
             'type'  => 'select',
-            'required' => 0,
+            'required' => 1,
             'conditional_logic' => array(
                 array(
                     array(
@@ -1067,7 +1069,7 @@ class DisclaimerFieldsServiceProvider implements Provider
             'label' => 'User types',
             'name' => 'disclaimer_settings_user_types',
             'type' => 'repeater',
-            'required' => 0,
+            'required' => 1,
             'conditional_logic' => array(
                 array(
                     array(

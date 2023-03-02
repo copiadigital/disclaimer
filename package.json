@@ -1,20 +1,14 @@
 {
-  "name": "@roots/clover",
-  "version": "0.0.1",
+  "name": "copiadigital_disclaimer",
+  "version": "1.0.0",
   "license": "MIT",
   "private": true,
-  "description": "Clover",
-  "homepage": "https://roots.io/",
+  "description": "Disclaimer",
+  "homepage": "https://github.com/copiadigital/disclaimer",
   "licenses": [
     {
       "type": "MIT",
       "url": "http://opensource.org/licenses/MIT"
-    }
-  ],
-  "authors": [
-    {
-      "name": "Roots",
-      "email": "team@roots.io"
     }
   ],
   "browserslist": [

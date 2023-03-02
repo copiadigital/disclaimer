@@ -1261,9 +1261,9 @@
   integrity sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==
 
 "@types/node@*", "@types/node@>=10.0.0":
-  version "18.14.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.2.tgz#c076ed1d7b6095078ad3cf21dfeea951842778b1"
-  integrity sha512-1uEQxww3DaghA0RxqHx0O0ppVlo43pJhepY51OxuQIKHpjbnYLA7vcdwioNPzIqmC2u3I/dmylcqjlh0e7AyUA==
+  version "18.14.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.4.tgz#0e64ec0b35a772e1e3d849f9a0ff61782d0cb647"
+  integrity sha512-VhCw7I7qO2X49+jaKcAUwi3rR+hbxT5VcYF493+Z5kMLI0DL568b7JI4IDJaxWFH0D/xwmGJNoXisyX+w7GH/g==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -1534,16 +1534,16 @@
     react-dom "^17.0.2"
 
 "@wordpress/escape-html@^2.22.0":
-  version "2.27.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/escape-html/-/escape-html-2.27.0.tgz#424312af2327c5e59e068be29538cb0c7296d375"
-  integrity sha512-XXmqdY6AOpzegQeKCqAkaqfHdgcyLdXRE2E5iP67YSVuz/ccLP3Xm4YU/IRVBBKWK6Zzb5/dGwefGGN0r37fEw==
+  version "2.28.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/escape-html/-/escape-html-2.28.0.tgz#e3f301acba89c49def75b74dbec8896865df34ce"
+  integrity sha512-GvtHuTfmfaIQ05BHUHGMmAKM1vU9Z2glE02m+7a0NqlzQAaNK3zG4tQ1xeu1kLEt+iHcTnLhYgPVBDxTNbN/FA==
   dependencies:
     "@babel/runtime" "^7.16.0"
 
 "@wordpress/warning@^2.15.0":
-  version "2.27.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/warning/-/warning-2.27.0.tgz#19f5f4b85a121069b810ffaca05f2e9f8a3e24c5"
-  integrity sha512-s5JIGBNGTnYVsNN0zxCRxbi2Gs+q+tqSZNAznHQWkCeANaB22LeUQw7KL13T0ekFL6y1h2jNP9tWSU5/mnMTCg==
+  version "2.28.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/warning/-/warning-2.28.0.tgz#c7de016c1d4cef862f8f4915911c5c958409dbc7"
+  integrity sha512-6EnZBKHGJsCcgbYOqD/JX3R5B48u3Zmm3Ha1vUpJE9rIHjq8ALM9zG2bYqkTw4mieEs5TvlDOkS3tYoH+S+wsQ==
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -2770,9 +2770,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.284:
-  version "1.4.311"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.311.tgz#953bc9a4767f5ce8ec125f9a1ad8e00e8f67e479"
-  integrity sha512-RoDlZufvrtr2Nx3Yx5MB8jX3aHIxm8nRWPJm3yVvyHmyKaRvn90RjzB6hNnt0AkhS3IInJdyRfQb4mWhPvUjVw==
+  version "1.4.315"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.315.tgz#b60a6676b3a1db332cfc8919118344aa06b9ac99"
+  integrity sha512-ndBQYz3Eyy3rASjjQ9poMJGoAlsZ/aZnq6GBsGL4w/4sWIAwiUHVSsMuADbxa8WJw7pZ0oxLpGbtoDt4vRTdCg==
 
 elliptic@^6.5.3:
   version "6.5.4"
@@ -3669,12 +3669,12 @@ ipaddr.js@^2.0.1:
   integrity sha512-1qTgH9NG+IIJ4yfKs2e6Pp1bZg8wbDbKHT21HrLIeYBTRLgMYKnMTPAuI3Lcs61nfx5h1xlXnbJtH1kX5/d/ng==
 
 is-array-buffer@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/is-array-buffer/-/is-array-buffer-3.0.1.tgz#deb1db4fcae48308d54ef2442706c0393997052a"
-  integrity sha512-ASfLknmY8Xa2XtB4wmbz13Wu202baeA18cJBCeCy0wXUHZF0IPyVEXqKEcd+t2fNSLLL1vC6k7lxZEojNbISXQ==
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/is-array-buffer/-/is-array-buffer-3.0.2.tgz#f2653ced8412081638ecb0ebbd0c41c6e0aecbbe"
+  integrity sha512-y+FyyR/w8vfIRq4eQcM1EYgSTnmHXPqaF+IgzgraytCFq5Xh8lllDVmAZolPJiZttZLeFSINPYMaEJ7/vWUa1w==
   dependencies:
     call-bind "^1.0.2"
-    get-intrinsic "^1.1.3"
+    get-intrinsic "^1.2.0"
     is-typed-array "^1.1.10"
 
 is-arrayish@^0.2.1:

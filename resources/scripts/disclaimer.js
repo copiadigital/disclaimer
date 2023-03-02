@@ -3,13 +3,13 @@
     /*
     * Show country disclaimer text on select field change
     */
-    const $country = $('.disclaimer__form #countries');
+    const $country = $('.disclaimer__form #disclaimer-countries');
 
     $country.on('change', function(){
-      let countryCodeValue = $('option:selected').val();
-      let countryContent = $('.country-content');
-      let allowedCountries = $('.allowed-countries');
-      let userTypes = $('#user-types');
+      let countryCodeValue = $(this).find('option:selected').val();
+      let countryContent = $('.disclaimer-modal-body .country-content');
+      let allowedCountries = $('.disclaimer-modal-body .allowed-countries');
+      let userTypes = $('#disclaimer-user-types');
       let userTypesOptions = userTypes.find('option');
       
       $(this).find('option:selected').each(function(){
@@ -29,8 +29,8 @@
           if(!allowedCountries.hasClass(countryCodeValue)) {
             $('.disclaimer-modal-footer button[name="accept"]').hide();
             $('.disclaimer-modal-footer button[name="not-allowed"]').show();
-            if(typeof $('.disclaimer-disclaimer__form #user-types option:selected').data('user-allowed') !== 'undefined') {
-              if($('.disclaimer-disclaimer__form #user-types option:selected').data('user-allowed') === 0 || !allowedCountries.hasClass(countryCodeValue)) {
+            if(typeof $('.disclaimer-disclaimer__form #disclaimer-user-types option:selected').data('user-allowed') !== 'undefined') {
+              if($('.disclaimer-disclaimer__form #disclaimer-user-types option:selected').data('user-allowed') === 0 || !allowedCountries.hasClass(countryCodeValue)) {
                 $('.disclaimer-modal-footer button[name="accept"]').hide();
                 $('.disclaimer-modal-footer button[name="not-allowed"]').show();
               } else {
@@ -41,8 +41,8 @@
           } else {
             $('.disclaimer-modal-footer button[name="not-allowed"]').hide();
             $('.disclaimer-modal-footer button[name="accept"]').show();
-            if(typeof $('.disclaimer__form #user-types option:selected').data('user-allowed') !== 'undefined') {
-              if($('.disclaimer__form #user-types option:selected').data('user-allowed') !== 0 || allowedCountries.hasClass(countryCodeValue)) {
+            if(typeof $('.disclaimer__form #disclaimer-user-types option:selected').data('user-allowed') !== 'undefined') {
+              if($('.disclaimer__form #disclaimer-user-types option:selected').data('user-allowed') !== 0 || allowedCountries.hasClass(countryCodeValue)) {
                 $('.disclaimer-modal-footer button[name="not-allowed"]').hide();
                 $('.disclaimer-modal-footer button[name="accept"]').show();
               } else {
@@ -76,14 +76,14 @@
       });
     });
 
-    $('.disclaimer__form #user-types').on('change', function(){
-      let allowedCountries = $('.allowed-countries');
+    $('.disclaimer__form #disclaimer-user-types').on('change', function(){
+      let allowedCountries = $('.disclaimer-modal-body .allowed-countries');
       $(this).find('option:selected').each(function(){
         if(typeof $(this).data('user-allowed') !== 'undefined') {
           if($(this).data('user-allowed') === 0) {
             $('.disclaimer-modal-footer button[name="accept"]').hide();
             $('.disclaimer-modal-footer button[name="not-allowed"]').show();
-            if(!allowedCountries.hasClass($('.disclaimer__form #countries option:selected').val()) || $(this).data('user-allowed') === 0) {
+            if(!allowedCountries.hasClass($('.disclaimer__form #disclaimer-countries option:selected').val()) || $(this).data('user-allowed') === 0) {
               $('.disclaimer-modal-footer button[name="accept"]').hide();
               $('.disclaimer-modal-footer button[name="not-allowed"]').show();
             } else {
@@ -93,8 +93,8 @@
           } else {
             $('.disclaimer-modal-footer button[name="not-allowed"]').hide();
             $('.disclaimer-modal-footer button[name="accept"]').show();
-            if(!$('.disclaimer-disclaimer__form #countries option:selected').hasClass('default')) {
-              if(allowedCountries.hasClass($('.disclaimer__form #countries option:selected').val()) || $(this).data('user-allowed') === 0) {
+            if(!$('.disclaimer-disclaimer__form #disclaimer-countries option:selected').hasClass('default')) {
+              if(allowedCountries.hasClass($('.disclaimer__form #disclaimer-countries option:selected').val()) || $(this).data('user-allowed') === 0) {
                 $('.disclaimer-modal-footer button[name="not-allowed"]').hide();
                 $('.disclaimer-modal-footer button[name="accept"]').show();
               } else {
@@ -117,7 +117,7 @@
 
     $declineButton.on('click', function() {
       setDisclaimerCookie('disclaimer', 'declined', 1);
-      window.location = $('.deny-url').data('deny-page');
+      window.location = $('.disclaimer .deny-url').data('deny-page');
     });
 
     $notAllowedButton.on('click', function(event) {
@@ -126,7 +126,7 @@
         event.stopPropagation();
       } else {
         setDisclaimerCookie('disclaimer', 'declined', 1);
-        window.location = $('.deny-url').data('deny-page');
+        window.location = $('.disclaimer .deny-url').data('deny-page');
       }
       $('.disclaimer__form').addClass('was-validated');
     });
@@ -173,11 +173,11 @@
           $('.disclaimer-modal-footer p').show();
         } else if ($('button[name="accept"]').on('click') && form.checkValidity() === true) {
           setDisclaimerCookie('disclaimer', 'accepted', 1);
-          setCountryCodeCookie('countryCode', $('#countries').val(), 1);
-          setUserTypeCookie('userType', $('#user-types').val(), 1);
+          setCountryCodeCookie('countryCode', $('#disclaimer-countries').val(), 1);
+          setUserTypeCookie('userType', $('#disclaimer-user-types').val(), 1);
         } else if ($('button[name="decline"]').on('click') && form.checkValidity() === true) {
           setDisclaimerCookie('disclaimer', 'declined', 1);
-          window.location = $('.deny-url').data('deny-page');
+          window.location = $('.disclaimer .deny-url').data('deny-page');
         }
 
         form.classList.add('was-validated');

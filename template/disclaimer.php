@@ -19,7 +19,7 @@
 
               <?php if(get_field('disclaimer_settings_show_country', 'option')): ?>
                 <div class="form-group">
-                  <select id="countries" name="countries" class="form-control" required aria-label="Country">
+                  <select id="disclaimer-countries" name="countries" class="form-control" required aria-label="Country">
                     <option class="default" selected disabled value="">Please select a country</option>
                     <?php if(get_field('disclaimer_settings_countries_all', 'option')): ?>
                       <?php foreach($this->getCountries() as $country): ?>
@@ -36,7 +36,7 @@
 
               <?php if(get_field('disclaimer_settings_show_user_type', 'option')): ?>
                 <div class="form-group">
-                  <select id="user-types" name="user-types" class="form-control" required aria-label="User type">
+                  <select id="disclaimer-user-types" name="user-types" class="form-control" required aria-label="User type">
                     <option class="default" selected disabled value="">Please select a user type</option>
                     <?php foreach(get_field('disclaimer_settings_user_types', 'option') as $user_type): ?>
                       <?php
